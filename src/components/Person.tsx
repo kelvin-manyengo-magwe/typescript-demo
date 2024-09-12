@@ -1,14 +1,14 @@
+
+import { Name } from './Person.types';
+
 type PersonProps = {
-    name: {
-      firstname: string,
-      secondname: string
-    }
+    name: Name
 };
 
-export const Person = (props: PersonProps) => {
+export const Person = ({ name }: PersonProps) => {
     return (
         <div>
-            {props.name.firstname} {props.name.secondname}
+            {name.first} {name.last}
         </div>
     )
 }
