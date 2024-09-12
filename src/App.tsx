@@ -3,6 +3,7 @@ import './App.css';
 import { Greet } from './components/Greet';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
+import { Button } from './components/Button';
 
 function App() {
     const personName = {
@@ -29,6 +30,7 @@ function App() {
         <Greet isLoggedIn={false} name="Vishwaz" messageCount={10} />
         <Person name={personName} />
         <PersonList names={personList} />
+        <Button handleClick={ (event, id) => console.log('Button clicked', event, id)} />
     </div>
   );
 }
