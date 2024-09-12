@@ -5,6 +5,8 @@ import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Button } from './components/Button';
 import { Input } from './components/Input';
+import { Container } from './components/Container';
+
 
 function App() {
     const personName = {
@@ -28,12 +30,14 @@ function App() {
     ]
   return (
     <div className="App">
-        <Greet isLoggedIn={false} name="Vishwaz" messageCount={10} />
-        <Person name={personName} />
-        <PersonList names={personList} />
-        <Button handleClick={ (event, id) => console.log('Button clicked', event, id)} />
+          <Greet isLoggedIn={false} name="Vishwaz" messageCount={10} />
+          <Person name={personName} />
+          <PersonList names={personList} />
+          <Button handleClick={ (event, id) => console.log('Button clicked', event, id)} />
 
-        <Input value='' handleChange={(event) => console.log(event)} />
+          <Input value='' handleChange={(event) => console.log(event)} />
+
+          <Container styles={{border: '1px solid black', padding: '1rem'}} />
     </div>
   );
 }
